@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Colas para el Cabello</title>
+  <style>
+    /* Estilos estéticos y tecnológicos */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0eee3e;
+      color: #2bf810;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #0fe607;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #00ff37;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #dddddd;
+      padding: 5px;
+      margin: 10px 0;
+    }
+    
+    .item {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .menu {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+    
+    .menu li {
+      margin: 0 10px;
+    }
+    
+    .welcome-message {
+      background-color: #00ff37;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="welcome-message" id="welcome">
+    <h1>Bienvenido(a) a nuestra tienda de Colas para el Cabello</h1>
+    <p>¡Hola! ¿Cómo te llamas?</p>
+    <input type="text" id="nameInput" placeholder="Escribe tu nombre aquí">
+    <button onclick="saveName()">Enviar</button>
+  </div>
+
+  <ul class="menu">
+    <li><a href="#home">Inicio</a></li>
+    <li><a href="#products">Productos</a></li>
+    <li><a href="#questions">Preguntas</a></li>
+    <li><a href="#suggestions">Sugerencias</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+
+  <div id="home">
+    <h1>Colas para el Cabello</h1>
+    <div class="item">
+      <img src="imagen1.jpg" alt="Cola para el Cabello 1">
+      <p>Descripción: Esta cola para el cabello está hecha de materiales de alta calidad.</p>
+      <p>Precio: $9.99</p>
+    </div>
+
+    <div class="item">
+      <img src="imagen2.jpg" alt="Cola para el Cabello 2">
+      <p>Descripción: Cola para el cabello con diseño moderno y cómodo.</p>
+      <p>Precio: $12.99</p>
+    </div>
+  </div>
+
+  <div id="products">
+    <!-- Aquí puedes agregar más productos -->
+  </div>
+
+  <div id="questions">
+    <h2>Preguntas</h2>
+    <p>Si tienes alguna pregunta, no dudes en contactarnos:</p>
+    <!-- Agrega aquí un formulario de contacto o información de contacto -->
+  </div>
+
+  <div id="suggestions">
+    <h2>Sugerencias</h2>
+    <p>Si tienes alguna sugerencia para mejorar nuestro sitio, déjanos saber:</p>
+    <!-- Agrega aquí un formulario de sugerencias -->
+  </div>
+
+  <div id="contact">
+    <h2>Contacto</h2>
+    <p>Puedes contactarnos a través de:</p>
+    <!-- Agrega aquí información de contacto como correo electrónico o número de teléfono -->
+  </div>
+
+  <script>
+    function saveName() {
+      var nameInput = document.getElementById('nameInput');
+      var name = nameInput.value;
+      var welcomeDiv = document.getElementById('welcome');
+      welcomeDiv.innerHTML = '<h1>Bienvenido(a), ' + name + '</h1><p>¿En qué puedo ayudarte?</p>';
+    }
+  </script>
+</body>
+
+</html>
